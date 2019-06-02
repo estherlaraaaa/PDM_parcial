@@ -5,11 +5,11 @@ import androidx.room.PrimaryKey
 import java.sql.Time
 import java.util.*
 
-@Entity
-data class Partido (
+@Entity(tableName = "match")
+data class Match (
 
     @PrimaryKey
-    private val id: Int,
+    private val id: String,
 
     private val teamA: String,
     private val teamB: String,
