@@ -9,13 +9,13 @@ import java.util.*
 data class Match (
 
     @PrimaryKey
-    private val id: String,
+     val nameMatch: String,
 
-    private val nameTeam: String,
-    private val teamA: String,
-    private val teamB: String,
-    private val date: String,
-    private val time: String,
-    private val pointTeamA: Int,
-    private val pointTeamB: Int
+     val teamA: String,
+     val teamB: String,
+     val date: String,
+     val time: String,
+     val pointTeamA: String,
+     val pointTeamB: String,
+     val win: String
 )

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activities.newTeamActivity">
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Partido"
+            android:textAllCaps="true"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_marginTop="70sp"/>
+    <EditText
+            android:hint="Nombre del equipo"
+            android:layout_marginTop="10dp"
+            android:id="@+id/et_nameTeam"
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    <EditText
+            android:hint="Puntos ganados"
+            android:layout_marginTop="10dp"
+            android:id="@+id/et_pointsTeam"
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    <EditText
+            android:hint="Fecha del partido"
+            android:layout_marginTop="10dp"
+            android:id="@+id/et_dateTeam"
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    <EditText
+            android:hint="Hora del partido"
+            android:layout_marginTop="10dp"
+            android:id="@+id/et_timeTeam"
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    <Button
+            android:layout_marginTop="40sp"
+            android:id="@+id/btn_agregar"
+            android:text="Agregar"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+</LinearLayout>

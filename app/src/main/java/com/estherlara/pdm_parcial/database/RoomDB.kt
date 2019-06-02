@@ -54,12 +54,12 @@ public abstract class RoomDB : RoomDatabase() {
         suspend fun populateDatabase(TeamDAO:TeamDAO, MatchDAO:MatchDAO){
 
             //Inserts team
-            TeamDAO.insert(Team("1", "Warriors", 119))
-            TeamDAO.insert(Team("2", "Raptors", 108))
+            TeamDAO.insert(Team( "Warriors", "119", "01/05/2019", "13:50"))
+            TeamDAO.insert(Team( "Raptors", "108", "25/03/19", "18:30"))
 
             //inserts match
-            MatchDAO.insert(Match("1", "Final", "Warriors", "Raptors", "01/05/2019", "01:30", 109, 108))
-
+            MatchDAO.insert(Match("Final", "Warriors", "Raptors", "01/05/2019", "01:30", "109", "108", "Raptors"))
+            MatchDAO.insert(Match("Semi final", "Warriors", "Raptors", "07/07/2019", "04:30", "25", "100", "Raptors"))
         }
     }
 }
