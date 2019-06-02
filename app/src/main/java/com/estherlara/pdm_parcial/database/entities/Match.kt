@@ -11,9 +11,11 @@ data class Match (
     @PrimaryKey
     private val id: String,
 
+    private val nameTeam: String,
     private val teamA: String,
     private val teamB: String,
-    private val date: Date,
-    private val time: Time,
-    private val points: Int
+    private val date: String,
+    private val time: String,
+    private val pointTeamA: Int,
+    private val pointTeamB: Int
 )

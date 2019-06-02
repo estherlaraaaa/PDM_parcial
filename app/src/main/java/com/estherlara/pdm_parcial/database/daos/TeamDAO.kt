@@ -11,6 +11,9 @@ import com.estherlara.pdm_parcial.database.entities.Team
 @Dao
 interface TeamDAO {
 
+    @Query("SELECT * FROM team where name =:name")
+    suspend fun getOneTeam(name: String) : Team
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(team: Team)
 
