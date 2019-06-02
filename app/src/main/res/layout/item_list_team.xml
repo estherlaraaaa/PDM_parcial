@@ -29,6 +29,7 @@
                 android:layout_toRightOf="@id/fotoImageViewTeam"
                 android:layout_alignParentTop="true"
                 android:textSize="30sp"
+                android:text=""
         />
 
         <TextView
@@ -38,6 +39,7 @@
                 android:layout_toRightOf="@id/fotoImageViewTeam"
                 android:layout_below="@id/tv_nameTeam"
                 android:textSize="10sp"
+                android:text=""
         />
         <TextView
                 android:layout_width="wrap_content"
@@ -46,6 +48,7 @@
                 android:layout_toRightOf="@id/fotoImageViewTeam"
                 android:layout_below="@id/tv_pointsTeam"
                 android:textSize="10sp"
+                android:text=""
         />
         <TextView
                 android:layout_width="wrap_content"
@@ -54,6 +57,7 @@
                 android:layout_toRightOf="@id/fotoImageViewTeam"
                 android:layout_below="@id/tv_dateTeam"
                 android:textSize="10sp"
+                android:text=""
         />
 
 

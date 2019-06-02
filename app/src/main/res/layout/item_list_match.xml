@@ -79,6 +79,14 @@
                 android:layout_below="@id/tv_dateMatch"
                 android:textSize="10sp"
         />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_win"
+                android:layout_toRightOf="@id/fotoImageViewMatch"
+                android:layout_below="@id/tv_timeMatch"
+                android:textSize="10sp"
+        />
 
 
 

@@ -30,6 +30,7 @@ class MatchAdapter internal constructor(context: Context) : RecyclerView.Adapter
         holder.pointsTeamB.text = current.pointTeamB
         holder.dateMatch.text = current.date
         holder.timeMatch.text = current.time
+        holder.win.text = current.win
 
     }
     internal fun setMatch(match: List<Match>) {
@@ -45,7 +46,7 @@ class MatchAdapter internal constructor(context: Context) : RecyclerView.Adapter
         val pointsTeamB: TextView = itemView.findViewById(R.id.tv_pointsTeamBMatch)
         val dateMatch: TextView = itemView.findViewById(R.id.tv_dateMatch)
         val timeMatch: TextView = itemView.findViewById(R.id.tv_timeMatch)
-
+        val win: TextView = itemView.findViewById(R.id.tv_win)
 
 
     }

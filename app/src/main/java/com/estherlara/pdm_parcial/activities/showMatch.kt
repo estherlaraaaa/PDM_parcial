@@ -27,10 +27,10 @@ class showMatch : AppCompatActivity(), LifecycleOwner {
 
         val viewmodel = ViewModelProviders.of(this).get(ViewModel::class.java)
 
-        viewmodel.allMatch.observe(this, Observer { books->
-            books?.let {
+        viewmodel.allMatch.observe(this, Observer { match->
+            match?.let {
 
-                adapter?.setMatch(books)
+                adapter?.setMatch(match)
 
             }
         })

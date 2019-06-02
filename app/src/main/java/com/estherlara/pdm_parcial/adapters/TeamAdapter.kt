@@ -6,10 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.RecyclerView
@@ -19,66 +16,37 @@ import com.estherlara.pdm_parcial.database.entities.Team
 import com.estherlara.pdm_parcial.viewModel.ViewModel
 
 
-class TeamAdapter internal constructor(context: Context) : RecyclerView.Adapter<TeamAdapter.TeamViewHolder>() , View.OnClickListener {
+class PartidosAdapter internal constructor(context : Context): RecyclerView.Adapter<PartidosAdapter.TeamViewHolder>(){
+    private val inflater : LayoutInflater = LayoutInflater.from(context)
+    private var team = emptyList<Team>()
 
-    private val inflater: LayoutInflater = LayoutInflater.from(context)
-    private var team = emptyList<Team>() //
-    private var listener: View.OnClickListener ?= null
-    private var listenerBoton: View.OnClickListener ?= null
 
-    inner class TeamViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nameTeam: TextView = itemView.findViewById(R.id.et_nameTeam)
-        val pointsTeam: TextView = itemView.findViewById(R.id.et_pointsTeam)
-        val dateTeam: TextView = itemView.findViewById(R.id.et_dateTeam)
-        val timeTeam: TextView = itemView.findViewById(R.id.et_timeTeam)
-
+    class TeamViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val nameTeam : TextView = itemView.findViewById(R.id.tv_nameTeam)
+        val pointsTeam : TextView = itemView.findViewById(R.id.tv_pointsTeam)
+        val dateTeam : TextView = itemView.findViewById(R.id.tv_dateTeam)
+        val timeTeam : TextView = itemView.findViewById(R.id.tv_timeTeam)
     }
 
-
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TeamViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PartidosAdapter.TeamViewHolder {
         val itemView = inflater.inflate(R.layout.item_list_team, parent, false)
-        itemView.setOnClickListener(listener)
-
         return TeamViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: TeamViewHolder, position: Int) {
+    override fun getItemCount(): Int = team.size
 
-
+    override fun onBindViewHolder(holder: PartidosAdapter.TeamViewHolder, position: Int) {
         val current = team[position]
-        holder.nameTeam.text = current.name
-        holder.pointsTeam.text = current.points
-        holder.dateTeam.text = current.date
-        holder.timeTeam.text = current.time
-
+        holder.nameTeam.text = current.name.toString()
+        holder.pointsTeam.text = current.points.toString()
+        holder.dateTeam.text = current.date.toString()
+        holder.timeTeam.text = current.time.toString()
     }
 
-    internal fun setTeam(team: List<Team>) {
-        this.team = team
+    internal fun setTeam(teams: List<Team>) {
+        this.team = teams
         notifyDataSetChanged()
     }
 
-    override fun getItemCount() = team.size
-
-    fun setOnClickListenerBoton(listener : View.OnClickListener){
-        this.listenerBoton = listener
-
-    }
-
-    fun setOnClickListener(listener: View.OnClickListener){
-        this.listener = listener
-
-    }
-
-
-    override fun onClick(v: View?) {
-        if(listener !=null){
-            listener?.onClick(v)
-        }
-        if(listenerBoton != null){
-            listenerBoton?.onClick(v)
-        }
-    }
 
 }

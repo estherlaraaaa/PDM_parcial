@@ -12,7 +12,7 @@ import com.estherlara.pdm_parcial.database.entities.Team
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-@Database(entities = arrayOf(Team::class, Match::class), version = 1, exportSchema = false)
+@Database(entities = arrayOf(Team::class, Match::class), version = 4, exportSchema = false)
 public abstract class RoomDB : RoomDatabase() {
 
     abstract fun TeamDAO() : TeamDAO

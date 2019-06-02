@@ -35,6 +35,19 @@ class TeamFagment : Fragment() {
 
     var actividad  = Activity()
     var iCOmunica = object : IComunicaFragments {
+        override fun sendMatch(
+            nameMatch: String,
+            teamA: String,
+            teamB: String,
+            date: String,
+            time: String,
+            pointsTeamA: String,
+            pointsTeamB: String,
+            win: String
+        ) {
+
+        }
+
         override fun sendTeam(
             nameTeam: String,
             pointsTeam: String,
@@ -60,7 +73,7 @@ class TeamFagment : Fragment() {
         val showTeam = vista.findViewById<Button>(R.id.btn_team)
         val showMatch = vista.findViewById<Button>(R.id.btn_match)
         val showGame = vista.findViewById<Button>(R.id.btn_game)
-        val add = vista.findViewById<Button>(R.id.btn_agregar)
+        val add = vista.findViewById<Button>(R.id.btn_addTeam)
 
         val adapter = context?.let { TeamAdapter(it) }
         recyclerView.adapter = adapter
@@ -131,7 +144,7 @@ class TeamFagment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance() =
             TeamFagment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)

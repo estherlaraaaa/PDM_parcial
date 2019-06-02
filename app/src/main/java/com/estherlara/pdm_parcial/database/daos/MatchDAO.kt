@@ -10,9 +10,6 @@ import com.estherlara.pdm_parcial.database.entities.Match
 @Dao
 interface MatchDAO {
 
-    @Query("SELECT * FROM `match` where nameTeam =:name")
-    suspend fun getOneMatch(name: String) : Match
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(match:Match)
 

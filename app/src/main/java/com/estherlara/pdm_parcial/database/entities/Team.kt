@@ -6,9 +6,9 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "team")
 data class Team (
 
-    @PrimaryKey val name: String,
+    @PrimaryKey val name: String = "ja",
 
-     val points: String,
-     val date: String,
-     val time: String
+     val points: String = "ja",
+     val date: String = "ja",
+     val time: String = "ja"
 )
