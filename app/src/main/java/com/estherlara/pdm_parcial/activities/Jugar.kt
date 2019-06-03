@@ -30,14 +30,13 @@ class Jugar : AppCompatActivity(), LifecycleOwner {
 
         val tvEquipoA : TextView  = findViewById<TextView>(R.id.tv_equipoA) as TextView
         val tvEquipoB : TextView = findViewById<TextView>(R.id.tv_equipoB) as TextView
+        val btn_teamA_uno : Button = findViewById(R.id.btn_masuno_a)
+        val btn_teamA_dos : Button = findViewById(R.id.btn_masdos_a)
+        val btn_teamA_tres : Button = findViewById(R.id.btn_mastres_a)
+        val btn_teamB_uno : Button = findViewById(R.id.btn_masuno_b)
+        val btn_teamB_dos : Button = findViewById(R.id.btn_masdos_b)
+        val btn_teamB_tres : Button = findViewById(R.id.btn_mastres_b)
         val btnFinish : Button = findViewById<Button>(R.id.btn_finish)
-        val btn1A : Button = findViewById(R.id.btn_masuno_a)
-        val btn2A : Button = findViewById(R.id.btn_masdos_a)
-        val btn3A : Button = findViewById(R.id.btn_mastres_a)
-        val btn1B : Button = findViewById(R.id.btn_masuno_b)
-        val btn2B : Button = findViewById(R.id.btn_masdos_b)
-        val btn3B : Button = findViewById(R.id.btn_mastres_b)
-        val btnreset : Button = findViewById(R.id.bt_reset)
 
         val equipoA = intent.getStringExtra("EquipoA")
         val equipoB = intent.getStringExtra("EquipoB")
@@ -46,40 +45,31 @@ class Jugar : AppCompatActivity(), LifecycleOwner {
         tvEquipoB.text = equipoB
 
         //Equipo A AGREGAR PUNTOS
-    btn1A.setOnClickListener {
+    btn_teamA_uno.setOnClickListener {
         scoreViewModel.scoreTeamA += 1
         scoreViewModel.currentScoreA.value = scoreViewModel.scoreTeamA
     }
-        btn2A.setOnClickListener {
+        btn_teamA_dos.setOnClickListener {
             scoreViewModel.scoreTeamA += 2
             scoreViewModel.currentScoreA.value = scoreViewModel.scoreTeamA
         }
-        btn3A.setOnClickListener {
+        btn_teamA_tres.setOnClickListener {
             scoreViewModel.scoreTeamA += 3
             scoreViewModel.currentScoreA.value = scoreViewModel.scoreTeamA
         }
         //Equipo B agregar puntos
-        btn1B.setOnClickListener {
+        btn_teamB_uno.setOnClickListener {
             scoreViewModel.scoreTeamB += 1
             scoreViewModel.currentScoreB.value = scoreViewModel.scoreTeamB
         }
-        btn2B.setOnClickListener {
+        btn_teamB_dos.setOnClickListener {
             scoreViewModel.scoreTeamB += 2
             scoreViewModel.currentScoreB.value = scoreViewModel.scoreTeamB
         }
-        btn3B.setOnClickListener {
+        btn_teamB_tres.setOnClickListener {
             scoreViewModel.scoreTeamB += 3
             scoreViewModel.currentScoreB.value = scoreViewModel.scoreTeamB
         }
-        //reset puntos
-        btnreset.setOnClickListener {
-            scoreViewModel.scoreTeamB = 0
-            scoreViewModel.currentScoreB.value = scoreViewModel.scoreTeamB
-
-            scoreViewModel.scoreTeamA = 0
-            scoreViewModel.currentScoreA.value = scoreViewModel.scoreTeamA
-        }
-
 
         scoreViewModel = ViewModelProviders.of(this).get(ScoreViewModel::class.java)
 
