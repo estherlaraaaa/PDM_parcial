@@ -25,12 +25,12 @@
             android:layout_gravity="center"
             android:layout_width="200dp"
             android:layout_height="58dp"
-            android:text="Jugar"
+            android:text="PLAY"
             android:background="@color/colorBtn"/>
     <Button
             android:layout_marginTop="10dp"
             android:id="@+id/btn_ver_game"
-            android:text="Partidos"
+            android:text="GAMES"
             android:layout_width="200dp"
             android:layout_height="63dp"
             android:background="@color/colorBtn2"/>

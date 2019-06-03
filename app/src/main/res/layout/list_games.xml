@@ -11,6 +11,8 @@
         android:text="Partidos"
         android:textSize="30dp"
         android:gravity="center"
+        android:textColor="@color/colorLetras2"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <FrameLayout

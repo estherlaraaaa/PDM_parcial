@@ -8,5 +8,6 @@
     <color name="colorLetras">#1D12BB</color>
     <color name="colorLetras2">#000000</color>
     <color name="colorfondo">#FCFCFC</color>
+    <color name="colorcardview">#979590</color>
 
 </resources>
