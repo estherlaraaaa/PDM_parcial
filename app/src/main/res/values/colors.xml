@@ -9,5 +9,8 @@
     <color name="colorLetras2">#000000</color>
     <color name="colorfondo">#FCFCFC</color>
     <color name="colorcardview">#979590</color>
+    <color name="colorfinish">#A50000</color>
+    <color name="colorrestart">#0034B4</color>
+    <color name="colorPuntaje">#D9F127</color>
 
 </resources>

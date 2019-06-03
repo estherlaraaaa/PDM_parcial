@@ -8,120 +8,120 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:background="@color/colorcardview"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
     >
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:background="@color/colorcardview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-        <TextView
-            android:id="@+id/tv_pointA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorLetras2"
-            android:textStyle="bold"
-            android:layout_marginRight="20dp"
-            android:text="0"
-            android:textSize="40dp"/>
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-        <TextView
-            android:text="TEAM:  "
-            android:textColor="@color/colorLetras2"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tv_teamA"
-            android:textColor="@color/colorLetras2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        </LinearLayout>
-        <TextView
-            android:text="vs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:textColor="@color/colorLetras2"
-            android:textStyle="bold"
-            android:layout_marginRight="20dp"/>
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        <TextView
-            android:text="TEAM:"
-            android:textColor="@color/colorLetras2"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tv_teamB"
-            android:textColor="@color/colorLetras2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        </LinearLayout>
-        <TextView
-            android:id="@+id/tv_pointB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="0"
-            android:textColor="@color/colorLetras2"
-            android:textStyle="bold"
-            android:textSize="40dp"/>
-
-    </LinearLayout>
-            <LinearLayout
+                android:orientation="vertical"
                 android:layout_gravity="center"
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:background="@drawable/resultado"
+                android:layout_width="match_parent"
+                android:layout_height="141dp"
+                android:alpha="0.8">
+
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
                 <TextView
-                    android:text="DATE "
-                    android:textColor="@color/colorLetras2"
-                    android:textStyle="bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            <TextView
-                android:text=""
-                android:textColor="@color/colorLetras2"
-                android:id="@+id/tv_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                        android:id="@+id/tv_pointA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorLetras2"
+                        android:textStyle="bold"
+                        android:layout_marginRight="20dp"
+                        android:text="0"
+                        android:textSize="40dp"/>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+                    <TextView
+                            android:text="TEAM:  "
+                            android:textColor="@color/colorLetras2"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    <TextView
+                            android:id="@+id/tv_teamA"
+                            android:textColor="@color/colorLetras2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView
+                        android:text="vs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/colorLetras2"
+                        android:textStyle="bold"
+                        android:layout_marginRight="20dp"/>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    <TextView
+                            android:text="TEAM:"
+                            android:textColor="@color/colorLetras2"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    <TextView
+                            android:id="@+id/tv_teamB"
+                            android:textColor="@color/colorLetras2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView
+                        android:id="@+id/tv_pointB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="0"
+                        android:textColor="@color/colorLetras2"
+                        android:textStyle="bold"
+                        android:textSize="40dp"/>
+
             </LinearLayout>
             <LinearLayout
-                android:layout_gravity="center"
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp">
-                <TextView
-                    android:text="WIN:"
-                    android:textColor="@color/colorLetras2"
-                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content">
                 <TextView
-                    android:id="@+id/tv_win"
-                    android:textColor="@color/colorLetras2"
+                        android:text="DATE "
+                        android:textColor="@color/colorLetras2"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:text=""
+                        android:textColor="@color/colorLetras2"
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+                <TextView
+                        android:text="WIN:"
+                        android:textColor="@color/colorLetras2"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:id="@+id/tv_win"
+                        android:textColor="@color/colorLetras2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
             </LinearLayout>
 
 
