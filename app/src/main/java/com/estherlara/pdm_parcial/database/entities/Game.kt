@@ -7,10 +7,10 @@ import androidx.room.PrimaryKey
 @Entity (tableName = "Game")
 data class Game (
 
-    @ColumnInfo(name="TeamA")
+    @ColumnInfo(name="EquipoA")
     val EquipoA : String,
 
-    @ColumnInfo(name="TeamB")
+    @ColumnInfo(name="EquipoB")
     val EquipoB: String,
 
     @ColumnInfo(name="ScoreA")
@@ -21,7 +21,6 @@ data class Game (
 
     @ColumnInfo(name = "Fecha")
     val fecha : String,
-
     @ColumnInfo(name="Ganador")
     val Ganador : String
 ){
