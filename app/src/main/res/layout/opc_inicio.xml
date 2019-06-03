@@ -7,25 +7,32 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
+        android:background="@drawable/fondoprincipal"
+        android:alpha="0.8"
         tools:context=".activities.MainActivity">
-    <TextView
-        android:text="Seleccione una opcion: "
-        android:textSize="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BASKETBALL"
+            android:textColor="@color/colorLetras"
+            android:textStyle="bold"
+            android:textSize="60sp"
+            android:layout_marginBottom="50sp"
+            />
     <Button
             android:id="@+id/btn_play"
             android:layout_gravity="center"
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="Jugar"/>
+            android:layout_height="58dp"
+            android:text="Jugar"
+            android:background="@color/colorBtn"/>
     <Button
-        android:layout_marginTop="10dp"
+            android:layout_marginTop="10dp"
             android:id="@+id/btn_ver_game"
             android:text="Partidos"
             android:layout_width="200dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="63dp"
+            android:background="@color/colorBtn2"/>
 
 </LinearLayout>
