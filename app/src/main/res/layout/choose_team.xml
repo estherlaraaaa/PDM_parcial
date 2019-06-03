@@ -7,34 +7,42 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
+        android:background="@drawable/equipo"
         tools:context=".activities.nameTeams">
     <TextView
         android:layout_marginVertical="20dp"
-        android:text="Nombre de los equipos participantes"
+        android:text="TEAM"
+        android:textColor="@color/colorLetras2"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="20sp"
-        android:gravity="center"/>
+        android:textSize="70sp"
+        android:gravity="center"
+    android:background="@color/colorfondo"/>
     <LinearLayout
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
+        android:background="@color/colorfondo"
         android:layout_marginBottom="50dp">
         <TextView
-            android:text="Equipo A: "
+            android:text="Team A: "
             android:layout_weight="1"
-            android:textSize="20dp"
+            android:textSize="30dp"
+            android:textColor="@color/colorLetras2"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
-            android:id="@+id/et_equipoA"
-            android:layout_weight="100"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+                android:id="@+id/et_equipoA"
+                android:layout_weight="100"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:textColor="@color/colorLetras2"
+                android:textStyle="bold"/>
 
 
     </LinearLayout>
@@ -44,28 +52,34 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginLeft="50dp"
+        android:background="@color/colorfondo"
         android:layout_marginRight="50dp">
         <TextView
-            android:text="Equipo B: "
-            android:textSize="20dp"
+            android:text="Team B: "
+            android:textSize="30dp"
             android:layout_weight="1"
+            android:textColor="@color/colorLetras2"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
             android:id="@+id/et_equipoB"
             android:layout_weight="100"
+            android:textColor="@color/colorLetras2"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="45dp" />
 
 
     </LinearLayout>
     <Button
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:id="@+id/btn_Comenzar"
-        android:text="Iniciar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:background="@color/colorBtn"
+            android:layout_gravity="center"
+            android:id="@+id/btn_Comenzar"
+            android:text="START"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"/>
 
 </LinearLayout>
