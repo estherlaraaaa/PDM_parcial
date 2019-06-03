@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LifecycleOwner
@@ -21,8 +22,6 @@ class Jugar : AppCompatActivity(), LifecycleOwner {
 
     lateinit var scoreViewModel: ScoreViewModel
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.play_game)
@@ -31,13 +30,13 @@ class Jugar : AppCompatActivity(), LifecycleOwner {
 
         val tvEquipoA : TextView  = findViewById<TextView>(R.id.tv_equipoA) as TextView
         val tvEquipoB : TextView = findViewById<TextView>(R.id.tv_equipoB) as TextView
-        val btnTerminar : Button = findViewById<Button>(R.id.btn_Terminar)
-        val btn1A : Button = findViewById(R.id.bt_team_a_free_throw)
-        val btn2A : Button = findViewById(R.id.bt_team_a_2_p)
-        val btn3A : Button = findViewById(R.id.bt_team_a_3_p)
-        val btn1B : Button = findViewById(R.id.bt_team_b_free_throw)
-        val btn2B : Button = findViewById(R.id.bt_team_b_2_p)
-        val btn3B : Button = findViewById(R.id.bt_team_b_3_p)
+        val btnFinish : Button = findViewById<Button>(R.id.btn_finish)
+        val btn1A : Button = findViewById(R.id.btn_masuno_a)
+        val btn2A : Button = findViewById(R.id.btn_masdos_a)
+        val btn3A : Button = findViewById(R.id.btn_mastres_a)
+        val btn1B : Button = findViewById(R.id.btn_masuno_b)
+        val btn2B : Button = findViewById(R.id.btn_masdos_b)
+        val btn3B : Button = findViewById(R.id.btn_mastres_b)
         val btnreset : Button = findViewById(R.id.bt_reset)
 
         val equipoA = intent.getStringExtra("EquipoA")
@@ -82,8 +81,6 @@ class Jugar : AppCompatActivity(), LifecycleOwner {
         }
 
 
-
-
         scoreViewModel = ViewModelProviders.of(this).get(ScoreViewModel::class.java)
 
         val viewmodel = ViewModelProviders.of(this).get(ViewModel::class.java)
@@ -103,24 +100,24 @@ class Jugar : AppCompatActivity(), LifecycleOwner {
         scoreViewModel.currentScoreA.observe(this, puntosAObserver)
         scoreViewModel.currentScoreB.observe(this,puntosBObserver)
 
-        btnTerminar.setOnClickListener {
+        btnFinish.setOnClickListener {
             val scoreA = tv_score_team_a.text.toString()
             val scoreB = tv_score_team_b.text.toString()
 
-            //Se agrega la fecha actual del dispositivo
-            val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
-            val currentDate = sdf.format(Date())
+            //fecha
+            val date = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+            val date2 = date.format(Date())
 
 
             //validando quien gano
             if(scoreB.toInt() > scoreA.toInt()){
-                viewmodel.insert(Game(tvEquipoA.text.toString(),tvEquipoB.text.toString(),scoreA.toInt(),scoreB.toInt(),currentDate,tvEquipoB.text.toString()))
+                viewmodel.insert(Game(tvEquipoA.text.toString(),tvEquipoB.text.toString(),scoreA.toInt(),scoreB.toInt(),date2,tvEquipoB.text.toString()))
                 finish()
             }else if(scoreB.toInt() < scoreA.toInt()){
-                viewmodel.insert(Game(tvEquipoA.text.toString(),tvEquipoB.text.toString(),scoreA.toInt(),scoreB.toInt(),currentDate,tvEquipoA.text.toString()))
+                viewmodel.insert(Game(tvEquipoA.text.toString(),tvEquipoB.text.toString(),scoreA.toInt(),scoreB.toInt(),date2,tvEquipoA.text.toString()))
                 finish()
             }else if(scoreB.toInt() == scoreA.toInt()){
-                viewmodel.insert(Game(tvEquipoA.text.toString(),tvEquipoB.text.toString(),scoreA.toInt(),scoreB.toInt(),currentDate,"Empate"))
+                viewmodel.insert(Game(tvEquipoA.text.toString(),tvEquipoB.text.toString(),scoreA.toInt(),scoreB.toInt(),date2,"Empate"))
                 finish()
 
             }
